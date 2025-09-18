@@ -23,24 +23,26 @@
 
 
 
-//  function min(numbers)
-// {
+ function min(numbers)
+{
     
-//     let min = numbers[0];
-//     let sec = numbers[0];
-//     for(let i = 0; i< numbers.length; i++ )
-//     {
-//         if(min > numbers[i])
-//         {
-//             min = numbers[i];
-//         }
-//         if ((sec < numbers[i]) && (sec > min)) {
-//             sec > min;
-//         }
-//     }
-//     console.log("Minimum is: " + min + ' and second minimum is: ' + sec);
-// }
-//  min([10, 3, 30, 140, 50, 3, 54, 70, -10, 80, 90, 4, 3, -20, -30, 100, 3])
+    let min = numbers[0];
+    let sec = numbers[1];
+    for(let i = 0; i< numbers.length; i++ )
+    {
+        if(min > numbers[i])
+        {
+            min = numbers[i];
+        }
+        else if ((sec > min[i]) && (i > min));{
+        {
+            sec = [i];
+        }
+        }
+    }
+    console.log("Minimum is: " + min + ' and second minimum is: ' + sec);
+}
+ min([10, 3, 30, 140, 50, 3, 54, 70, -10, 80, 90, 4, 3, -20, -30, 100, 3])
 
 
 
@@ -220,3 +222,209 @@ greet();
 //     }
 // }
 // runcar();
+
+
+
+
+// let person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//     greet: function(){
+//         console.log('hello' + this.firstName);
+//     },
+//     work: function() {
+//         console.log(this.firstName + " is working");
+//     },
+// };
+
+// let car ={
+//     brand: 'Toyota',
+//     model: 'Camry',
+//     year: 2020,
+//     customCleared: false,
+//     start: function(){
+//         console.log('car started');
+//     },
+//     stop: function(){
+//         console.log('car stopped');
+//     }
+// };
+
+
+
+// console.log(car);
+
+// console.log(car.brand);
+// console.log(car.model);
+
+
+// car.start();
+// car.stop();
+
+
+// ------REMEMBER TO PUT COMMAS IN AFTER STATEMENTS WITHIN OBJECTS!!!!!!!!!!!----------
+// Note, objects kinda act like divs (from html) in terms that they are a section.
+
+// let player = {
+//     name: 'Dag',
+//     class: 'Warrior',
+//     attack: function(){
+//         console.log(this.name + ' attacks with a sword!');
+//     },
+//     results: function(){
+//         console.log(this.name +' has won the battle!');
+//     },
+// }
+
+
+// let player2 = {
+//     name: 'Brenda',
+//     class: 'Cleric',
+//     action: function(){
+//         console.log(this.name + ' heals with her staff!');
+//     },
+//     results: function(){
+//         console.log('Dag recieved healing from'+ this.name);
+//     },
+// }
+
+// console.log(player.name);
+// console.log(player.class);
+// console.log(player2.name);
+// console.log(player2.class);
+// console.log(player);
+// console.log(player2);
+
+//--------------DESTRUCTURING ARRAYS---------------
+
+// let numbers = [10, 20, 30, 40, 50];
+
+// let [a , b, c, d] = numbers;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+//--------------DESTRUCTURING OBJECTS---------------
+
+// let car ={
+//     brand: 'Toyota',
+//     model: 'Camry',
+//     year: 2020,
+//     customCleared: false,
+//     start: function(){
+//         console.log('car started');
+//     },
+//     stop: function(){
+//         console.log('car stopped');
+//     }
+// };
+
+// let a_ = car.brand; USE these if you do not know the variable name in advance
+// let b_ = car.model;
+
+
+// let {brand, model} = car;
+// console.log(brand);
+// console.log(model);
+
+
+
+///--------------SPREAD OPERATOR---------------
+    // spread operator is used to copy the values of one array into another 
+// spread operator(...)
+
+//     let vaggies = ['potato', 'carrot', 'onion'];
+//     let fruits = ['apple', 'banana', 'mango'];
+
+// let food = [...vaggies,...fruits];
+
+//     console.log(food);
+
+// let copyFood = [...food];
+// copyFood.push('orange');
+
+//     console.log(food);
+//     console.log(copyFood);
+
+
+// let user = {name: 'John Doe', age: 30};
+
+// let details = {city: 'new York', country: 'USA'};
+
+// let userProfile = {...user, ...details};
+
+// console.log(userProfile);
+
+
+//-------Value/REFERANCE TYPES:---------------
+
+
+// let person1 = {name: 'Robert'};
+// let person2 = {name: 'Luis'};
+
+// person2 = person1;
+
+// person2.name = 'Jake';
+
+// console.log(person1.name);
+// console.log(person2.name);
+// person2 and person1 both point to the same object. 
+// person1 and person2 are now both 'Jake'
+///Interview question.
+
+
+////-------DEEP CLONING:---------------
+// let person1 = {name: 'Robert'};
+// let person2 = {name: 'Luis'};
+
+// person2 = structuredClone(person1);
+
+// person2.name = 'Jake';
+
+// console.log(person1.name);
+// console.log(person2.name);
+
+
+//-------PRACTICE EXERCISE:---------------
+        //NOT FINISHED
+// function runprogram([a, b, c]) {
+//     let letters;
+//     let numbers= letters;
+//     let count = 0;
+//     let notify = true;
+
+//     while (true) {
+//         letters = prompt('enter letter:  type "0" to end');
+//         if (letters === a) {
+//             notify = true; 
+//             count++;
+//             console.log(letters + ' has been added ' + count + ' times');
+
+//         } else if (letters === b) {
+//             count= 0;
+//             count++;
+//             notify = false;
+//             numbers = b; 
+//             console.log(letters + ' has been added ' + count + ' times');
+
+//         } else if (letters === c) {
+//             count= 0;
+//             notify = true;
+//             numbers = c; 
+//             count++;
+//             console.log(letters + ' has been added ' + count + ' times');
+
+//         } else {
+//             (letters === '0') 
+//             console.log('Program ended');
+//             break;
+//         }
+//     }
+// }
+
+// runprogram(['a', 'b', 'c']);
+
+

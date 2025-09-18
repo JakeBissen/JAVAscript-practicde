@@ -12,9 +12,11 @@ if (secertValue === 0) {
     console.log('two');
 }else if (secertValue === 3) {
     console.log('three');
- } else (secertValue === 4) {
-    console.log('four');
-  } 
+ } else (secertValue === 4);
+    console.log('four');{
+
+    }
+  
 
 
   ///     SOLUTION 2 SWITCH CASE
