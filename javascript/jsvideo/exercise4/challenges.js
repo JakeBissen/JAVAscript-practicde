@@ -38,16 +38,45 @@
 //      }
 // }   //Guessed correctly!
 
-
+//// ParseInt drops fractional values, so 12.3 becomes 12 and 5.8 becomes 5 for example.
 2. 
+// let intValue = null;
+// do {
+//     let value = prompt('Enter a number between 1 and 100');
+//     intValue = Number.parseInt(value);
+// } while (
+// Number.isNaN(intValue) || 
+// typeof intValue !== 'number' || intValue < 1 
+// || intValue > 100
+// );
 
 
+// // console.log('the input is valid,' + intValue);
 
+// 3. 
 
+// let minValue = 1;
+// let maxValue = 100;
 
+// while(minValue < maxValue) {
+//     let midpoint = Math.floor((minValue + maxValue) / 2);
+//     if (intValue === midpoint){
+//          minValue = maxValue = midpoint; // causes all to be equal/the same number
+//     } else if (intValue < midpoint){
+//         maxValue = midpoint - 1;
+//         console.log(
+//             `${midpoint} lower (interval: ${minValue} to ${maxValue})`       
+//         );
+//     } else{
+//         minValue = midpoint + 1;
+//         console.log
+//         (`${midpoint} higher (interval: ${minValue} to ${maxValue})`
+//         );
 
-
-
+//     }
+       
+// }
+//     console.log( `${minValue} match`);
 
 
 

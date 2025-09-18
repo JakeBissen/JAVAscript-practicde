@@ -23,26 +23,32 @@
 
 
 
- function min(numbers)
-{
+ function min(numbers) {
     
-    let min = numbers[0];
-    let sec = numbers[1];
-    for(let i = 0; i< numbers.length; i++ )
-    {
-        if(min > numbers[i])
-        {
-            min = numbers[i];
-        }
-        else if ((sec > min[i]) && (i > min));{
-        {
-            sec = [i];
-        }
+    let min = Infinity;
+    let sec = Infinity;
+    for(let i = 0; i< numbers.length; i++ ) {
+        let num = numbers[i];
+        if(num < min) {
+            sec = min;
+            min = num;
+        
+        }else if (num > min && num < sec) {
+            sec = num;
         }
     }
-    console.log("Minimum is: " + min + ' and second minimum is: ' + sec);
-}
- min([10, 3, 30, 140, 50, 3, 54, 70, -10, 80, 90, 4, 3, -20, -30, 100, 3])
+        if (sec === Infinity) {
+            console.log('No second minimum found, all numbers are equal.');
+        }
+        else{
+      console.log("Minimum is: " + min + ' and second minimum is: ' + sec);
+
+        }
+     
+    }
+
+ min([10, 3, 30, 140, 50, 3, 54, 70, -10, 80, 90, 4, 3, -20, -30, 100, 3]);
+
 
 
 
