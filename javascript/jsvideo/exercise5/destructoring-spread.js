@@ -202,3 +202,39 @@
 // console.log(val, num);
 
 // this equals let [value, num] = [{x:1}, 1]; 
+
+
+
+
+// let val = 1;
+// let o = {val: 1}
+
+// function plusOne(val, o){
+//     val += 1;
+//     o.val += 1;
+//     console.log(val, o);
+// };
+
+// plusOne(val, o);
+// console.log(val,o);
+
+// /\ -----> \/
+
+let val = 1;
+let o = {val: 1}
+
+function plusOne(val, o){
+    let internalO = {...val};
+    val += 1;
+    internalO.val += 1;
+    console.log('inside', val, internalO);
+};
+
+plusOne(val, o);
+console.log('outside', val, o);
+
+// let [val, o] = [1, {val:1}]
+// val <---- 1
+// o <--- {val: 1}
+
+// side affects: not disirable.
