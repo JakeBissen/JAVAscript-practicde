@@ -9,14 +9,16 @@ do{
 
 
     /* De Morgan's Laws:
-//   !(A && B) <-->!A ||!B
+  !(A && B) <-->!A ||!B
 A B                           
 F F  T             T
 F T  T             T
 T F  T             T
 T T  F             F
 
-// !(A || B) --> !A && !B
-// Check this table for truth equality. Remember to check/complete this before moduel 3 is finished
+!(A || B) --> !A && !B
+Check this table for truth equality. Remember to check/complete this before moduel 3 is finished
+
+*/
 
 

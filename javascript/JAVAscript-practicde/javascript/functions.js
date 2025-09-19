@@ -396,41 +396,41 @@ greet();
 
 //-------PRACTICE EXERCISE:---------------
         //NOT FINISHED
-// function runprogram([a, b, c]) {
-//     let letters;
-//     let numbers= letters;
-//     let count = 0;
-//     let notify = true;
+function runprogram([a, b, c]) {
+    let letters;
+    let numbers= letters;
+    let count = 0;
+    let notify = true;
 
-//     while (true) {
-//         letters = prompt('enter letter:  type "0" to end');
-//         if (letters === a) {
-//             notify = true; 
-//             count++;
-//             console.log(letters + ' has been added ' + count + ' times');
+    while (true) {
+        letters = prompt('enter letter:  type "0" to end');
+        if (letters === a) {
+            notify = true; 
+            count++;
+            console.log(letters + ' has been added ' + count + ' times');
 
-//         } else if (letters === b) {
-//             count= 0;
-//             count++;
-//             notify = false;
-//             numbers = b; 
-//             console.log(letters + ' has been added ' + count + ' times');
+        } else if (letters === b) {
+            count= 0;
+            count++;
+            notify = false;
+            numbers = b; 
+            console.log(letters + ' has been added ' + count + ' times');
 
-//         } else if (letters === c) {
-//             count= 0;
-//             notify = true;
-//             numbers = c; 
-//             count++;
-//             console.log(letters + ' has been added ' + count + ' times');
+        } else if (letters === c) {
+            count= 0;
+            notify = true;
+            numbers = c; 
+            count++;
+            console.log(letters + ' has been added ' + count + ' times');
 
-//         } else {
-//             (letters === '0') 
-//             console.log('Program ended');
-//             break;
-//         }
-//     }
-// }
+        } else {
+            (letters === '0') 
+            console.log('Program ended');
+            break;
+        }
+    }
+}
 
-// runprogram(['a', 'b', 'c']);
+runprogram(['a', 'b', 'c']);
 
 
