@@ -75,7 +75,8 @@ image.setAttribute('alt', 'random image from internet')
 ///  ----- HANDLING THE CLICK ---- ////
 
 function click(){
-    alert('button clicked');
+
+    alert.innerText('button clicked');
 }
 
 
@@ -84,6 +85,18 @@ function click(){
 //// ----- APPLYING(CREATING/REMOVING) ELEMENTS ---- /////
 
 
+function addItem(){
+    let input = document.getElementById
+    ('item-value').value;
+
+    let li = document.createElement('li')
+    li.innerText = input;
+
+    let ul = document.getElementById('item-list');
+    ul.appendChild(li);
+
+    document.getElementById ('item-value').value = '';
+}
 
 
 
