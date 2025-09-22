@@ -158,7 +158,7 @@
 
 
 ////// ---------- QUESTION 11 -----------/////
-/// I will be honest. I had to look up some examples for this. I plan on going back to this during the weekend and working on it without looking at notes as I did for the other questions. I will also complete the coding challenges in module 3 of the Javascript videos when I get the chance. Thank you.////
+/// I will be honest. I had to look up some examples for this. I plan on going back to this during the weekend and working on it without looking at notes as I did for the other questions. ////
 
 let balance = 1000;
 let quit = true;
