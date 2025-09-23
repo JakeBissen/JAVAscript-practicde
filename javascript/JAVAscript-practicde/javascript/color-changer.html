@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+         <style>
+    body {
+        padding: 100px;
+        text-align: center;
+        transition-delay: .25s ease;
+        
+    }
+    .color-box {
+      display: flex;
+      justify-content: center;
+
+    }
+    .container {
+        width: 100px;
+        height: 50px;
+        padding: 5px;
+        margin: 4px;
+        border-width: 2px;
+        border: 2px solid;
+        cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+   <h1>Pick a Color</h1>
+   <p> To change the background</p>
+
+   <div class="color-box">
+    <div class="container" style="background-color: blue;" data-color="blue"> </div>
+
+    <div class="container" style="background-color: orange;" data-color="orange"> </div>
+
+    <div class="container" style="background-color: cyan;" data-color="cyan"> </div>
+
+    <div class="container" style="background-color: pink;" data-color="pink"> </div>
+    <div class="container" style="background-color: green;" data-color="green"> </div>
+    <div class="container" style="background-color: mistyrose;" data-color="mistyrose"> </div>
+    <div class="container" style="background-color: wheat;" data-color="wheat"> </div>
+   </div>
+
+<script>
+    let containers = document.querySelectorAll('.container');
+
+    containers.forEach(function(container){ 
+        container.addEventListener('mouseover', function(){
+            let bgcolor = container.getAttribute('data-color');
+                    document.body.style.backgroundColor = bgcolor;
+
+        });
+    });
+
+</script>
+
+</body>
+</html>

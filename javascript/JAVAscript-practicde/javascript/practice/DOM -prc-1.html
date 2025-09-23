@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ----- SLECTING ELEMENTS ----- -->
+     
+    
+
+<!-- <h1 id="toe">Hellow World</h1>
+<button onclick="fingers()">Click me</button>
+
+<p class="para">I have a hand!</p>
+<p class="para">I have a hand!</p>
+
+
+<script>
+function fingers(){
+    let input = document.getElementById('toe');
+    input.innerText = 'Welcome to Javascript DOM!';
+    input.style.fontWeight = 'bold'
+
+     para()
+}
+
+function para(){
+        let elements = document.getElementsByClassName('para');
+        elements[0].style.color = "red";
+        elements[0].style.fontSize = "20px";
+    }
+
+
+</script> --> 
+
+<!-- <p id="demo"> old text</p> not working
+<button onclick="changetext()">click</button>
+<script>
+    function changetext(){
+        document.getElementById ('demo').innerHTML = 'new test using inner html'
+    }
+</script> -->
+
+
+ <!-- <p id="demo"> old text</p>
+<button onclick="changetext()">click</button>
+<script>
+    function changetext(){
+        document.getElementById ('demo').textContent = 'new test using inner html'
+    }
+</script> -->
+
+
+
+<!-- ------ CREATING AND REMOVING ELEMENTS -----  -->
+
+
+
+
+<!-- <div id="container"></div>
+<button onclick="addElement()">Add element</button>
+
+<script>
+    function addElement(){
+        let newpara = document.createElement('p')
+        newpara.textContent = 'this is a new paragraph';
+        document.getElementById('container').appendChild(newpara)
+    }
+</script>
+
+<ul id="list">
+    <li>item 1</li>
+    <li id="removeme">item 2</li>
+    <li>item 3</li>
+</ul>
+<button onclick="removeitem()">remove</button>
+
+
+<script>
+    function removeitem(){
+        let list =  document.getElementById('list');
+        let item = document.getElementById('removeme');
+        list.removeChild(item);
+    }
+</script>
+
+ <div>
+        <ul id="custom-list"></ul>
+        <input type="text" id = "listitem">
+        <button onclick="addItem()">ADD ITEM</button>
+        <button onclick="removeItem()">REMOVE ITEM</button>
+    </div>
+
+<script>
+function addItem() {
+    let get = document.getElementById("listitem").value;
+    if (!get) {return;}
+    let li = document.createElement("li");
+    li.innerText = get;
+    let ul = document.getElementById("custom-list");
+    ul.appendChild(li);
+    document.getElementById("listitem").value = "";
+}
+function removeItem() {
+    let ul = document.getElementById("custom-list");
+    let li = ul.lastElementChild;
+    ul.removeChild(li);
+}
+</script> -->
+
+
+<ul id="list">
+    <li>apple</li>
+    <li>banana</li>
+    <li>mango</li>
+</ul>
+<button onclick="replacefruit()">Replace Banana with Orange</button>
+
+<script>
+    function replacefruit(){
+        // Step 1: get the list
+        let list = document.getElementById('list');
+
+        //Step 2: create a new element (Orange)
+        let newItem = document.createElement('li');
+        newItem.textContent = 'orange';
+
+        //Step 3: select Bannana (2nd child, index 1)
+        let oldItem = list.children[1]
+
+        //Step 4: Replace Bannana with orange
+        list.replaceChild(newItem, oldItem);
+    }
+</script>
+
+
+
+</body>
+</html>
+
