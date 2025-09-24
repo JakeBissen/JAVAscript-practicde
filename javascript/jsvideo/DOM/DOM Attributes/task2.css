@@ -1,0 +1,44 @@
+html {
+  font-size: 10px;
+}
+
+.menu-container {
+  display: inline-block;
+  min-width: 50rem;
+  border: .5rem red dotted;
+}
+
+.menu-item {
+  display: inline-block;
+  border: 1px dotted black;
+  background-color: #ddd;
+  margin-top: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.menu-item:hover {
+  background-color: lightblue;  
+}
+
+.menu-item.selected {
+  background-color: darkred;
+  color: #bbb;
+  margin-top: 0;
+  padding-top: 3rem;
+}
+
+.menu-item.selected:hover {
+  background-color: darkred;
+} 
+
+/*
+ DRY - Don't Repeat Yourself
+ WET - We Enjoy Typing
+
+.class-name div
+- Step 1: give me all div elements
+- Step 2: keep those div elements that have a .class-name ancestor
+
+*/

@@ -1,0 +1,11 @@
+
+
+.paint-canvas {
+    border: 1px black solid;
+    display: block;
+    margin: 1rem;
+}
+
+.color-picker {
+    margin: 1rem 1 rem 0 1rem;
+}

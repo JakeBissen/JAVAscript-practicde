@@ -39,42 +39,125 @@ files with js- will go to javascript, and the ones without will go to css. Use t
 //// ---------------------------------- ///////
 
 
-function getMove() {
-    const value = Math.random();
-    return(
-        value < 0.2 ? 'x' :
-        value < 0.4 ? 'O' :
-        null
-    );
+// function getMove() {
+//     const value = Math.random();
+//     return(
+//         value < 0.2 ? 'x' :
+//         value < 0.4 ? 'O' :
+//         null
+//     );
+// }
+
+// const board = new Array(20).fill(null).map(
+//     () => new Array(20).fill(null).map(getMove)
+// )
+
+
+// const container = document.querySelector('.js-container');
+
+// function renderRow(rowData){
+//     let rowHtml = '<tr class="tic-tac-toe-row">';
+
+//     for (let cell of rowData){
+//         rowHtml += `<td class="tic-tac-toe-cell">${cell === null ? ' ' : cell}</td>`
+//     }
+//     rowHtml += '</tr>';
+//     return rowHtml;
+// }
+// function renderBoard(board){
+//     let html = '<table class="tic-tac-toe-board"> <tbody>';
+
+//     for (let row of board){
+//         html += renderRow(row);
+//     }
+//     html += '</tbody.</table>';
+//     return html;
+// }
+
+// let html = renderBoard(board);
+
+
+//// Creating the html for the tic-tack-toe board
+// container.innerHTML = html;
+
+
+
+
+/////--------- NEW BETTER CODE --------////////
+
+
+function resetGame(){
+const board = new Array(20).fill(null).map(
+    () => new Array(20).fill(null)
+);
+let nextMoveSymbol = 'X';
+return [board, nextMoveSymbol];
+}
+/// a tuple is an arrey of fixed length
+
+let [board, nextMoveSymbol] = resetGame()
+// the let is a pointer to the tuple.
+
+function containerAreaClicked(event){
+    let dataset = event.target.dataset; 
+    if (
+        typeof dataset.row === 'undefined' || 
+        typeof dataset.col === 'undefined'
+    ){
+        return;
+    }
+
+    const {row, col} = dataset;
+
+    if (board[row][col] === null){
+         board[row][col] = nextMoveSymbol;
+    nextMoveSymbol = nextMoveSymbol === 'X' ? 'O' : 'X';
+    renderBoard();
+    }
+    // if it was x before, it will now be o. Otherwise it will be x.
 }
 
-const board = new Array(20).fill(null).map(
-    () => new Array(20).fill(null).map(getMove)
-)
-
-
 const container = document.querySelector('.js-container');
+container.addEventListener('click', containerAreaClicked)
 
-function renderRow(rowData){
+function renderRow(rowData, rowIndex){
     let rowHtml = '<tr class="tic-tac-toe-row">';
 
-    for (let cell of rowData){
-        rowHtml += `<td class="tic-tac-toe-cell">${cell === null ? ' ' : cell}</td>`
+    for (let i = 0; i < rowData.length; i++){
+        let cell = rowData[i];
+        let columnIndex = i;
+        rowHtml += 
+        `<td class="tic-tac-toe-cell" 
+        data-row = "${rowIndex}" 
+        data-col="${columnIndex}">
+        ${cell  ?? ' '}
+        </td>`
     }
     rowHtml += '</tr>';
     return rowHtml;
 }
-function renderBoard(board){
+function renderBoard(){
     let html = '<table class="tic-tac-toe-board"> <tbody>';
 
-    for (let row of board){
-        html += renderRow(row);
+    for (let i = 0; i < board.length; i++){
+        let row = board[i];
+        html += renderRow(row, i);
     }
     html += '</tbody.</table>';
-    return html;
+
+    container.innerHTML = html;
+
 }
 
 let html = renderBoard(board);
 
+document
+    .querySelector('.js-new-game')
+    .addEventListener('click', () => {
 
-container.innerHTML = html;
+        [board, nextMoveSymbol] = resetGame();
+        renderBoard();
+    });
+
+
+

@@ -24,6 +24,7 @@
 body{
     background-color: black;
     color:lightgray; 
+    min-width: calc(20 * 45 + 200);
 }
 .tic-tac-toe-board {
     margin: 20px auto;
@@ -34,9 +35,11 @@ body{
 }
 
 .tic-tac-toe-cell{
-    font-size: 16px;
-    width: 24px;
-    height: 24px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     border: 2px solid lightgray;
+    -webkit-user-select: none;
+    user-select: none;
 }

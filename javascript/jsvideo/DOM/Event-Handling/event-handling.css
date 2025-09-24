@@ -1,0 +1,10 @@
+body{
+    margin: 40px;
+}
+
+
+.counter{
+    font-size: 36;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
