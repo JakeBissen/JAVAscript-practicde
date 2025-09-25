@@ -54,7 +54,9 @@ query.addEventListener('input', () => {
 // ) => {
 //         result.textContent = `Search result for "${value}" (simulated)`;
 //         timerId = null; 
-// CALLBACK FUNCTION
+
+
+// ---------- CALLBACK FUNCTION ---------//////
 
 
 let counter = 0;
@@ -68,6 +70,7 @@ let timerInterval = setInterval(() => {
         console.log('counter stopped');
     }
 }, 3000);
+
 
 
 
