@@ -12,40 +12,40 @@
 
 // -------OBJCET WITH METHOD (FUNCTION)-------
 
-let car = {
+// let car = {
 
-    brand: 'toyota',
-    model: 'corolla',
-    year: '2024',
+//     brand: 'toyota',
+//     model: 'corolla',
+//     year: '2024',
 
-    start: function(){
-        console.log('the car has started');
-    }
-};
+//     start: function(){
+//         console.log('the car has started');
+//     }
+// };
 
-console.log(car.brand);
-console.log(car.year);
-console.log(car.model);
+// console.log(car.brand);
+// console.log(car.year);
+// console.log(car.model);
 
-car.start();
+// car.start();
 
 
 // -------PRACTICE:------
 
-let oil = {
-    olive: 'olive oil',
-    butter: 'lard',
-    crude: 'petroleum',
+// let oil = {
+//     olive: 'olive oil',
+//     butter: 'lard',
+//     crude: 'petroleum',
 
-    cook: function(){
-        console.log('the oil has been cooked');
-    }
-}
-console.log(oil.olive);
-console.log(oil.butter);
-console.log(oil.crude);
+//     cook: function(){
+//         console.log('the oil has been cooked');
+//     }
+// }
+// console.log(oil.olive);
+// console.log(oil.butter);
+// console.log(oil.crude);
 
-oil.cook();
+// oil.cook();
 
 
 // -----END OF PRACTICE-----
@@ -161,16 +161,20 @@ oil.cook();
 // library.showbooks();
 
 
-let money = {
-    name: 'money forms',
-    types: ['cash', 'silver', 'credit card', 'gold', 'bitcoin',],
-    wealth: function(){
-        console.log('different types of ' + this.name + '-');
-        for (let i = 0; i < this.types.length; i++){
-            console.log(':' + this.types[i]);
-        }
-    }
-}
-console.log(money.name);
+// let money = {
+//     name: 'money forms',
+//     types: ['cash', 'silver', 'credit card', 'gold', 'bitcoin',],
+//     wealth: function(){
+//         console.log('different types of ' + this.name + '-');
+//         for (let i = 0; i < this.types.length; i++){
+//             console.log(':' + this.types[i]);
+//         }
+//     }
+// }
+// console.log(money.name);
 
-money.wealth();
+// money.wealth();
+
+
+
+

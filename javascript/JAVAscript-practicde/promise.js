@@ -99,4 +99,43 @@ document.getElementById('loadUserButton').addEventListener('click', () => {
 
 // this code acts like a json converter into javascript
 
+// only use APIs that have https- yes, CORS- no, AUTH- no.
 
+//when we use async, the promise is already resolved so we dont need to use 2 '.then' statements. 
+// it can be quite tricky to cause an image to appear first than the 'alert'. Take notes and watch examples. Also, time events/timers are not the best as they can be out of order, so use 'async' instead for more accurate information to be displayed. 
+
+
+let nameOfImage = null;
+document.getElementById('btnLoadCoffee').addEventListener('click', async () => {
+  let response = await fetch('https://foodish-api.com/api/images/burger')
+
+    let data = await response.json();
+
+    console.log(data);
+    console.log(data.image)
+    nameOfImage = data.image;
+
+    document.getElementById('image-name').textContent = data.image
+    
+    let img = document.getElementById('image');
+    img.setAttribute('src' , data.image);
+    img.onload = async() => {
+         
+    }
+    console.log(nameOfImage);
+
+    })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    

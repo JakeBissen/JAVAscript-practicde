@@ -1,5 +1,7 @@
 
+// in syncous, code runs line by line. The next line waits for the previous line to finish. 
 
+// In acynous, 
 
 
 
@@ -56,7 +58,7 @@ console.log(multiSteps);
 
 
 
-/// ----------- Good Example ----------////
+/// ----------- Good Examples ----------////
 
 
 // const task1promise = new Promise((resolve, reject) => {
@@ -73,5 +75,68 @@ console.log(multiSteps);
 // task1promise.then(console.log).catch(console.log);
 // task2promise.then(console.log);
 // task3promises.then(console.log('TASK 3: Step 1 completed')).then(console.log('TASK 3: Step 2 completed')).then(console.log('TASK 3: All steps completed'));
+
+
+
+////// ---------- GOOD EXAMPLES --------///////
+
+
+// let promise = new Promise((resolve, reject) => {
+//   let success = true; // change to false to test reject
+//   if (success) {
+//     resolve(" Task completed successfully!");
+//   } else {
+//     reject(" Task failed!");
+//   }
+// });
+// promise
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+
+// //   TASK 2:
+//   function fetchData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Data fetched from server!");
+//     }, 2000);
+//   });
+// }
+// fetchData().then((data) => console.log(data));
+
+// //task 3:
+// function step1() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve("Step 1 done"), 1000);
+//   });
+// }
+// function step2() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve("Step 2 done"), 1000);
+//   });
+// }
+// function step3() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve("Step 3 done"), 1000);
+//   });
+// }
+// step1()
+//   .then((msg) => {
+//     console.log(msg);
+//     return step2();
+//   })
+//   .then((msg) => {
+//     console.log(msg);
+//     return step3();
+//   })
+//   .then((msg) => {
+//     console.log(msg);
+//   });
+
+
 
 
