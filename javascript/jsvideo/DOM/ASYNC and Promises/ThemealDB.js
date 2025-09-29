@@ -10,7 +10,7 @@
 
 const categoryContainer = document.querySelector('.js-category-container');
 let categories = null;
-
+const mealContainer = document.querySelector('.js-meal-container');
 
 
 function getCategoryById(id){
@@ -68,10 +68,29 @@ function fetchCategories(){
     });
 }
 
-function displayMealDetails(meals){
 
+function renderMeal(meal){
+    return `
+    <div class="meal">  
+        <h2>${meal.strMeal}</h2>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+        <p> ${meal.strInstructions} </p>
+    </div>
+    `;
 }
 
+
+
+
+function displayMealDetails(mealResponses){
+  mealContainer.innerHTML =  mealResponses
+    .filter(response  => response.status === 'fulfilled')
+    .map(response  => response.value.meals[0]) // these arrays have a length of 1.
+    .map(meal => renderMeal(meal))
+    .join('');
+   
+}
+// if you have a response , you need a function.
 
 
 function loadMealsByCategory(response){
@@ -109,9 +128,10 @@ function categoryClicked(event){
     categoryContainer.innerHTML = `
     ${renderCategory(currentCategory, true)}
     <button data-id="all"> Choose another category</button>
-    
     `;
 
+
+    mealContainer.innerHTML = `<p>${'loading...'}</p>`;
     fetchMealListByCategory(currentCategory)
         .then(loadMealsByCategory);
     }
@@ -122,3 +142,5 @@ categoryContainer.addEventListener('click' , categoryClicked);
 
 
 // one option to being able to click on the item is to get the data set by finding the tag's parent element. Easiest way. 
+
+
